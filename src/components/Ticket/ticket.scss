@@ -1,0 +1,39 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/typography";
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 #0000001a;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 2px 8px 3px #0000001a;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__price {
+    @extend .display--large;
+    color: $blue-base;
+  }
+
+  &__airlane {
+    width: 120px;
+    height: 40px;
+    object-fit: contain;
+  }
+}

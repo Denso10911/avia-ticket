@@ -1,0 +1,10 @@
+# Ignore artifacts:
+dist
+node_modules
+package.json
+package-lock.json
+.eslintrc.js
+.babelrc
+.env
+tsconfig.json
+webpack.config.js

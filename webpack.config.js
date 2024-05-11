@@ -48,7 +48,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "public", to: "" }, //to the dist root directory
+        { from: "public", to: "" },
       ],
     }),
   ],
