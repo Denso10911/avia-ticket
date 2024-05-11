@@ -1,4 +1,4 @@
-import { SortT } from "./general"
+import { CurrencyT, SortT } from "./general"
 
 export type TicketSearchParamsT = {
   sort: SortT
@@ -20,7 +20,7 @@ export type DestinationT = Omit<LayoverT, "id"> & {
 export type TicketT = {
   id: number
   price: number
-  currency: string
+  currency: CurrencyT
   ticket_date: string
   destination_count: number
   forward_destination: DestinationT
