@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const production = process.env.NODE_ENV === "production"
 
 module.exports = {
-  entry: "./src/index.jsx",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: production ? "[name].[contenthash].js" : "[name].js",
