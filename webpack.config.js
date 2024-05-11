@@ -3,6 +3,7 @@ const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 const production = process.env.NODE_ENV === "production"
 
@@ -35,7 +36,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".*", ".js", ".ts", ".jsx", ".tsx", ".scss", ".sass"],
+    extensions: [".js", ".ts", ".tsx", ".scss", ".json"],
   },
 
   plugins: [
@@ -44,6 +45,11 @@ module.exports = {
       title: "Avia & React",
       template: "./src/index.html",
       favicon: "./public/favicon.ico",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public", to: "" }, //to the dist root directory
+      ],
     }),
   ],
   devServer: {
