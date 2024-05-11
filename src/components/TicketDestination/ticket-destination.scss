@@ -1,0 +1,23 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/typography";
+
+.ticket-destination {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    @extend .label--medium;
+    color: $blue-light;
+    text-transform: uppercase;
+  }
+  &__value {
+    @extend .display--medium;
+    color: $black;
+  }
+}
