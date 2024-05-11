@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "price": 1200,
+    "price": 12000,
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
     "destination_count": 0,
@@ -22,7 +22,7 @@
   },
   {
     "id": 2,
-    "price": 1200,
+    "price": 13500,
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
     "destination_count": 1,
@@ -73,7 +73,7 @@
   },
   {
     "id": 3,
-    "price": 1100,
+    "price": 11100,
     "currency": "USD",
     "ticket_date": "2024-05-16T10:00:00",
     "destination_count": 1,
@@ -124,7 +124,7 @@
   },
   {
     "id": 4,
-    "price": 1200,
+    "price": 23200,
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
     "destination_count": 2,
@@ -189,7 +189,7 @@
   },
   {
     "id": 5,
-    "price": 1200,
+    "price": 52200,
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
     "destination_count": 2,

@@ -1,11 +1,10 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {getTickets} from "./actions";
-import {TicketT} from "../../../types/tickets";
-
+import { createSlice } from "@reduxjs/toolkit"
+import { getTickets } from "./actions"
+import { TicketT } from "../../../types/tickets"
 
 interface TicketsState {
-  tickets: TicketT[],
-  loading: boolean,
+  tickets: TicketT[]
+  loading: boolean
 }
 
 const initialState: TicketsState = {
