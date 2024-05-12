@@ -5,9 +5,10 @@ import { TicketSearchParamsT } from "../../types/tickets"
 import { getTickets } from "../../redux/slices/Tickets/actions"
 import Ticket from "../../components/Ticket"
 
-interface Props {}
+import "./dashboard.scss"
+import { Filters } from "../../components"
 
-const Dashboard: React.FC<Props> = () => {
+const Dashboard = () => {
   const dispatch = useAppDispatch()
 
   const tickets = useAppSelector(getTicketsSelector)
@@ -21,10 +22,15 @@ const Dashboard: React.FC<Props> = () => {
   }, [])
 
   return (
-    <div>
-      {tickets.map(el => (
-        <Ticket ticket={el} key={el.id} />
-      ))}
+    <div className="dashboard">
+      <div className="dashboard__aside">
+        <Filters />
+      </div>
+      <div className="dashboard__body">
+        {tickets.map(el => (
+          <Ticket ticket={el} key={el.id} />
+        ))}
+      </div>
     </div>
   )
 }

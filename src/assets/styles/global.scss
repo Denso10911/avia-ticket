@@ -11,6 +11,11 @@ a {
   height: auto;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 body {
   font-family: OpenSans, sans-serif;
   background-color: #f3f7fa;
