@@ -1,9 +1,23 @@
 import React from "react"
+import cn from "classnames"
+import check from "../../assets/images/check.svg"
 
-interface Props {}
+import "./checkbox.scss"
 
-const Checkbox: React.FC<Props> = () => {
-  return <div></div>
+interface Props {
+  checked: boolean
+  onChange: () => void
+}
+
+const Checkbox: React.FC<Props> = ({ checked, onChange }) => {
+  return (
+    <div className="checkbox">
+      <input type="checkbox" checked={checked} onChange={onChange} className="checkbox__input" />
+      <div className={cn("checkbox__check", { "checkbox__check--checked": checked })}>
+        <img src={check} alt="check" />
+      </div>
+    </div>
+  )
 }
 
 export default Checkbox

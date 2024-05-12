@@ -1,0 +1,18 @@
+@import "../../assets/styles/mixins";
+
+.dashboard {
+  @include container;
+  display: flex;
+  gap: 40px;
+
+  &__aside {
+    display: flex;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+  }
+}

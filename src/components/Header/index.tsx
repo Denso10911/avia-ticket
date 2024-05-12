@@ -1,9 +1,18 @@
 import React from "react"
 
-interface Props {}
+import logo from "../../assets/images/logo.png"
 
-const Header: React.FC<Props> = () => {
-  return <div></div>
+import "./header.scss"
+import { Link } from "react-router-dom"
+
+const Header = () => {
+  return (
+    <div className="header">
+      <Link to="/" className="header__link">
+        <img className="header__logo" src={logo} alt="Logo Air" />
+      </Link>
+    </div>
+  )
 }
 
 export default Header

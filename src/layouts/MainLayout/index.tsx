@@ -2,9 +2,9 @@ import React from "react"
 import { Outlet } from "react-router"
 import { Header } from "../../components"
 
-interface Props {}
+import "./main-layout.scss"
 
-const MainLayout: React.FC<Props> = () => {
+const MainLayout = () => {
   return (
     <>
       <header>
