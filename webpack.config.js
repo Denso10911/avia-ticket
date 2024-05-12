@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
+const Dotenv = require("dotenv-webpack")
 
 const production = process.env.NODE_ENV === "production"
 
@@ -51,6 +52,7 @@ module.exports = {
         { from: "public", to: "" },
       ],
     }),
+    new Dotenv(),
   ],
   devServer: {
     historyApiFallback: true,
