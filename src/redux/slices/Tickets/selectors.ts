@@ -1,6 +1,5 @@
 import { RootState } from "../../store"
 import { SelectedTicketT } from "../../../types/tickets"
-import dayjs from "dayjs"
 import {
   getDestinationLayovers,
   getDestinationPeriod,

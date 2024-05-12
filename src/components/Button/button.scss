@@ -1,8 +1,10 @@
 @import "../../assets/styles/colors";
-@import "../../assets/styles/typography";
 
 .button {
-  @extend .display--small;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
   display: flex;
   justify-content: center;
   align-items: center;

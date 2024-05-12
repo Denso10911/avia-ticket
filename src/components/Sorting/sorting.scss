@@ -1,0 +1,91 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/screens";
+@import "../../assets/styles/mixins";
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #dfe5ec;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+
+  @include phone-xs {
+    flex-direction: column;
+    border: none;
+  }
+
+  &__title {
+    display: none;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+
+    @include phone-xs {
+      display: block;
+      text-transform: uppercase;
+      padding: 12px 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex: 1;
+    border-right: 1px solid #dfe5ec;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+
+    @include phone-xs {
+      justify-content: flex-start;
+      text-transform: capitalize;
+      padding: 12px 20px;
+      cursor: default;
+    }
+
+    &:hover {
+      background-color: $blue-lighter;
+    }
+
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+
+    &_active {
+      background-color: $blue-base;
+      color: $white;
+
+      @include phone-xs {
+        background-color: $blue-lighter;
+        color: $black;
+      }
+
+      &:hover {
+        background-color: $blue-base;
+
+        @include phone-xs {
+          background-color: $blue-lighter;
+        }
+      }
+    }
+  }
+}
+
+.tabs-mobile {
+  @include icon-wrapper;
+
+  display: none;
+
+  @include phone-xs {
+    display: flex;
+    padding: 15px;
+  }
+}

@@ -1,5 +1,6 @@
 @import "../../assets/styles/colors";
-@import "../../assets/styles/typography";
+@import "../../assets/styles/screens";
+@import "../../assets/styles/mixins";
 
 .filters {
   display: flex;
@@ -12,10 +13,30 @@
   padding: 10px 0;
   gap: 8px;
 
+  @include phone {
+    width: 100%;
+  }
+
   &__title {
-    @extend .label--large;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
     text-transform: uppercase;
     padding: 4px 20px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+
+    @include phone {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include phone-xs {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -24,12 +45,19 @@
     padding: 10px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+
     &:hover {
       background-color: $blue-lighter;
+
+      @include phone {
+        background-color: $white;
+      }
     }
   }
 
   &__label {
-    @extend .paragraph--medium;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
   }
 }

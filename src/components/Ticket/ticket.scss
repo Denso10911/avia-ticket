@@ -1,5 +1,5 @@
 @import "../../assets/styles/colors";
-@import "../../assets/styles/typography";
+@import "../../assets/styles/screens";
 
 .ticket {
   display: flex;
@@ -11,8 +11,21 @@
   box-shadow: 0 2px 8px 0 #0000001a;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  @include phone {
+    cursor: default;
+  }
+
+  @include phone-xs {
+    padding: 12px;
+  }
+
   &:hover {
     box-shadow: 0 2px 8px 3px #0000001a;
+
+    @include phone {
+      box-shadow: 0 2px 8px 0 #0000001a;
+    }
   }
 
   &__header {
@@ -28,7 +41,9 @@
   }
 
   &__price {
-    @extend .display--large;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
     color: $blue-base;
   }
 

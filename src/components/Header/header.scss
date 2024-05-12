@@ -1,8 +1,14 @@
+@import "../../assets/styles/screens";
+
 .header {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 60px 0 25px;
+
+  @include phone {
+    padding: 32px 0 24px;
+  }
 
   &__link {
     line-height: 0;

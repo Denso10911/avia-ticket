@@ -1,4 +1,4 @@
-import { CurrencyT, SortT } from "./general"
+import { CurrencyT } from "./general"
 
 export type TicketSearchParamsT = {
   sort: string | null
