@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 60px 0 25px;
+  padding: 60px 0 50px;
 
   @include phone {
     padding: 32px 0 24px;
@@ -12,6 +12,15 @@
 
   &__link {
     line-height: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 8px 0 #0000001a;
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: 0 2px 8px 3px #0000001a;
+    }
   }
 
   &__logo {
