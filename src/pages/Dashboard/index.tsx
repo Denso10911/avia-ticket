@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react"
+import { useSearchParams } from "react-router-dom"
+
 import { useAppDispatch, useAppSelector } from "../../hooks/redux"
-import { getTicketsSelector } from "../../redux/slices/Tickets/selectors"
-import { TicketSearchParamsT } from "../../types/tickets"
 import { getTickets } from "../../redux/slices/Tickets/actions"
-import Ticket from "../../components/Ticket"
+import { getTicketsSelector } from "../../redux/slices/Tickets/selectors"
+
+import { TicketSearchParamsT } from "../../types/tickets"
+import { Button, Filters, Sorting, Ticket } from "../../components"
 
 import "./dashboard.scss"
-import { Button, Filters } from "../../components"
-import { useSearchParams } from "react-router-dom"
-import Tabs from "../../components/Tabs"
 
 const Dashboard = () => {
   const dispatch = useAppDispatch()
@@ -42,11 +42,13 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <div className="dashboard__aside">
+      <div className="dashboard__filters">
         <Filters />
       </div>
-      <div className="dashboard__body">
-        <Tabs />
+      <div className="dashboard__sort">
+        <Sorting />
+      </div>
+      <div className="dashboard__data">
         {tickets.map(el => (
           <Ticket ticket={el} key={el.id} />
         ))}

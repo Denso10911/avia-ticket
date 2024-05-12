@@ -1,7 +1,7 @@
 import React from "react"
+import cn from "classnames"
 
 import spinner from "../../assets/images/spinner.svg"
-import cn from "classnames"
 
 import "./spinner.scss"
 

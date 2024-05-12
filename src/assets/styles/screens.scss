@@ -1,0 +1,11 @@
+@mixin phone {
+  @media screen and (width <= 920px) {
+    @content;
+  }
+}
+
+@mixin phone-xs {
+  @media screen and (width <= 540px) {
+    @content;
+  }
+}

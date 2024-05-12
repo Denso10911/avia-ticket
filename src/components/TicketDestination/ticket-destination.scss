@@ -1,5 +1,4 @@
 @import "../../assets/styles/colors";
-@import "../../assets/styles/typography";
 
 .ticket-destination {
   display: grid;
@@ -12,12 +11,18 @@
   }
 
   &__label {
-    @extend .label--medium;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
     color: $blue-light;
     text-transform: uppercase;
   }
+
   &__value {
-    @extend .display--medium;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
     color: $black;
   }
 }

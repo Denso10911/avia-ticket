@@ -1,0 +1,57 @@
+@import "../../assets/styles/screens";
+@import "../../assets/styles/mixins";
+
+.drawer-mobile {
+  transition: all 0.5s ease;
+
+  &--visible {
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0 0 0 / 20%);
+      z-index: 1;
+    }
+  }
+
+  &__icon {
+    @include icon-wrapper;
+
+    display: none;
+
+    @include phone-xs {
+      display: flex;
+      padding: 15px;
+    }
+  }
+
+  &__body {
+    transition: all 0.5s ease;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 0;
+
+    &--visible {
+      z-index: 2;
+      top: unset;
+      bottom: 0;
+      transform: translateY(0);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

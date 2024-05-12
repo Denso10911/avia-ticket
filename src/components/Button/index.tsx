@@ -1,8 +1,9 @@
 import React from "react"
 import cn from "classnames"
 
-import "./button.scss"
 import Spinner from "../Spinner"
+
+import "./button.scss"
 
 interface Props {
   text: string
@@ -13,7 +14,7 @@ interface Props {
 
 const Button: React.FC<Props> = ({ text, onClick, type, loading }) => {
   return (
-    <button className={cn("button")} onClick={onClick} type={type}>
+    <button disabled={loading} className={cn("button")} onClick={onClick} type={type}>
       {loading ? <Spinner size="md" /> : text}
     </button>
   )

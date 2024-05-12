@@ -1,5 +1,30 @@
+@import "screens";
+@import "colors";
+
 @mixin container {
   max-width: 920px;
   margin: 0 auto;
   padding: 0 103px 0 83px;
+
+  @include phone {
+    padding: 0 32px;
+  }
+
+  @include phone-xs {
+    padding: 0 24px;
+  }
+}
+
+@mixin icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $blue-lighter;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
 }

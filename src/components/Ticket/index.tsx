@@ -1,10 +1,12 @@
 import React from "react"
-import { SelectedTicketT } from "../../types/tickets"
-import airlane from "../../assets/images/airlane.png"
+
 import TicketDestination from "../TicketDestination"
+import { CurrencyEnum } from "../../utilities/emuns"
+import { SelectedTicketT } from "../../types/tickets"
+
+import airline from "../../assets/images/airline.png"
 
 import "./ticket.scss"
-import { CurrencyEnum } from "../../utilities/emuns"
 
 interface Props {
   ticket: SelectedTicketT
@@ -18,7 +20,7 @@ const Ticket: React.FC<Props> = ({ ticket }) => {
         <p className="ticket__price">
           {ticket.price} {CurrencyEnum[ticket.currency]}
         </p>
-        <img className="ticket__airlane" src={airlane} alt="airlane logo" />
+        <img className="ticket__airlane" src={airline} alt="airlane logo" />
       </div>
       <div className="ticket__body">
         <TicketDestination

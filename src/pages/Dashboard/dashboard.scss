@@ -1,19 +1,45 @@
 @import "../../assets/styles/mixins";
+@import "../../assets/styles/screens";
 
 .dashboard {
   @include container;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: 232px 1fr;
+  grid-template-areas: "a b" "a c";
   gap: 40px;
 
-  &__aside {
-    display: flex;
+  @include phone {
+    gap: 24px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c";
   }
 
-  &__body {
+  @include phone-xs {
+    grid-template-areas: "a b" "c c";
+    grid-template-columns: 1fr 24px;
+    gap: 12px;
+  }
+
+  &__filters {
+    display: flex;
+    grid-area: a;
+
+    @include phone-xs {
+      justify-content: flex-end;
+    }
+  }
+
+  &__sort {
+    grid-area: b;
+  }
+
+  &__data {
     display: flex;
     flex-direction: column;
     gap: 18px;
     flex: 1;
     padding-bottom: 50px;
+    grid-area: c;
   }
 }

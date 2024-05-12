@@ -1,5 +1,6 @@
 import React from "react"
 import cn from "classnames"
+
 import check from "../../assets/images/check.svg"
 
 import "./checkbox.scss"

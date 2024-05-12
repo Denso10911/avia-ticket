@@ -1,7 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { useSearchParams } from "react-router-dom"
-import "./filters.scss"
+
 import Checkbox from "../Checkbox"
+import DrawerMobile from "../DrawerMobile"
+
+import filterIcon from "../../assets/images/filter.svg"
+
+import "./filters.scss"
 
 interface Filter {
   id: number
@@ -20,6 +25,8 @@ const filtersList: Filter[] = [
 const Filters = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const destinations = searchParams.get("destinations")?.split(",") || []
+
+  const [visible, setVisible] = useState(false)
 
   const handleCheckboxChange = (value: string) => {
     let updatedDestinations: string[]
@@ -42,24 +49,26 @@ const Filters = () => {
   }
 
   return (
-    <div className="filters">
-      <div className="filters__title">Кількість пересадок</div>
-      <ul className="filters__list">
-        {filtersList.map(el => {
-          const isChecked = destinations.length
-            ? destinations.includes(el.value)
-            : el.value === "all"
-          return (
-            <li key={el.id}>
-              <label className="filters__item">
-                <Checkbox checked={isChecked} onChange={() => handleCheckboxChange(el.value)} />
-                <span className="filters__label">{el.label}</span>
-              </label>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <DrawerMobile icon={filterIcon} visible={visible} setVisible={setVisible}>
+      <div className="filters">
+        <div className="filters__title">Кількість пересадок</div>
+        <ul className="filters__list">
+          {filtersList.map(el => {
+            const isChecked = destinations.length
+              ? destinations.includes(el.value)
+              : el.value === "all"
+            return (
+              <li key={el.id}>
+                <label className="filters__item">
+                  <Checkbox checked={isChecked} onChange={() => handleCheckboxChange(el.value)} />
+                  <span className="filters__label">{el.label}</span>
+                </label>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </DrawerMobile>
   )
 }
 
