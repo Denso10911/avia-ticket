@@ -42,17 +42,19 @@ const Sorting = () => {
     <DrawerMobile icon={sortIcon} visible={visible} setVisible={setVisible}>
       <div className="sorting">
         <div className="sorting__title">Порядок квитків</div>
-        {sortingList.map(el => {
-          return (
-            <div
-              className={cn("sorting__item", sort === el.value && "sorting__item_active")}
-              key={el.id}
-              onClick={() => handleTabClick(el.value)}
-            >
-              {el.label}
-            </div>
-          )
-        })}
+        <ul className="sorting__list">
+          {sortingList.map(el => {
+            return (
+              <li
+                className={cn("sorting__item", sort === el.value && "sorting__item_active")}
+                key={el.id}
+                onClick={() => handleTabClick(el.value)}
+              >
+                {el.label}
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </DrawerMobile>
   )
