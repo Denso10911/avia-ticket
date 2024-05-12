@@ -1,8 +1,10 @@
 import { CurrencyT, SortT } from "./general"
 
 export type TicketSearchParamsT = {
-  sort: SortT
-  destination_count: number | null
+  sort: string | null
+  filter: {
+    destinations: string | null
+  }
 }
 
 export type LayoverT = {

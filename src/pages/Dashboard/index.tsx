@@ -7,19 +7,26 @@ import Ticket from "../../components/Ticket"
 
 import "./dashboard.scss"
 import { Filters } from "../../components"
+import { useSearchParams } from "react-router-dom"
 
 const Dashboard = () => {
   const dispatch = useAppDispatch()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const tickets = useAppSelector(getTicketsSelector)
 
+  const destinations = searchParams.get("destinations")
+  const sort = searchParams.get("sort")
+
   useEffect(() => {
     const searchParams: TicketSearchParamsT = {
-      sort: "cheap",
-      destination_count: null,
+      sort,
+      filter: {
+        destinations,
+      },
     }
     dispatch(getTickets(searchParams))
-  }, [])
+  }, [destinations, sort])
 
   return (
     <div className="dashboard">
