@@ -1,0 +1,41 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/typography";
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #dfe5ec;
+  width: 100%;
+  overflow: hidden;
+
+  &__item {
+    @extend .display--small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex: 1;
+    border-right: 1px solid #dfe5ec;
+    cursor: pointer;
+    background-color: white;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $blue-lighter;
+    }
+
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+
+    &_active {
+      background-color: $blue-base;
+      color: $white;
+      &:hover {
+        background-color: $blue-base;
+      }
+    }
+  }
+}

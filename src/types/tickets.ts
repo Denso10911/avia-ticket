@@ -5,6 +5,7 @@ export type TicketSearchParamsT = {
   filter: {
     destinations: string | null
   }
+  pageSize: number
 }
 
 export type LayoverT = {
@@ -25,6 +26,7 @@ export type TicketT = {
   currency: CurrencyT
   ticket_date: string
   destination_count: number
+  duration: number
   forward_destination: DestinationT
   back_destination: DestinationT
 }

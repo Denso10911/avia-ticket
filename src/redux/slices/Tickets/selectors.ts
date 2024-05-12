@@ -12,6 +12,7 @@ export const getTicketsSelector = (state: RootState): SelectedTicketT[] =>
     id: el.id,
     price: el.price,
     currency: el.currency,
+    duration: el.duration,
     forward: {
       destination: `${el.forward_destination.country_from} - ${el.forward_destination.country_to}`,
       period: getDestinationPeriod(

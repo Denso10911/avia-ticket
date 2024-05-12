@@ -5,10 +5,11 @@
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
     "destination_count": 0,
+    "duration": 37560,
     "forward_destination": {
       "country_from": "UA",
       "country_to": "EN",
-      "date_from": "2024-05-16T10:00:00",
+      "date_from": "2024-05-16T11:34:00",
       "date_to": "2024-05-16T15:00:00",
       "layovers": []
     },
@@ -17,6 +18,28 @@
       "country_to": "UA",
       "date_from": "2024-05-22T08:00:00",
       "date_to": "2024-05-22T15:00:00",
+      "layovers": []
+    }
+  },
+  {
+    "id": 8,
+    "price": 52000,
+    "currency": "USD",
+    "ticket_date": "2024-05-15T08:00:00",
+    "destination_count": 0,
+    "duration": 6060,
+    "forward_destination": {
+      "country_from": "UA",
+      "country_to": "EN",
+      "date_from": "2024-05-16T14:34:00",
+      "date_to": "2024-05-16T15:00:00",
+      "layovers": []
+    },
+    "back_destination": {
+      "country_from": "EN",
+      "country_to": "UA",
+      "date_from": "2024-05-22T08:00:00",
+      "date_to": "2024-05-22T09:15:00",
       "layovers": []
     }
   },
@@ -26,17 +49,18 @@
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
     "destination_count": 1,
+    "duration": 47100,
     "forward_destination": {
       "country_from": "UA",
       "country_to": "EN",
-      "date_from": "2024-05-16T10:00:00",
-      "date_to": "2024-05-16T15:00:00",
+      "date_from": "2024-05-16T10:15:00",
+      "date_to": "2024-05-16T15:55:00",
       "layovers": [
         {
           "id": 1,
           "country_from": "UA",
           "country_to": "DE",
-          "date_from": "2024-05-16T08:00:00",
+          "date_from": "2024-05-16T08:15:00",
           "date_to": "2024-05-16T09:30:00"
         },
         {
@@ -44,21 +68,21 @@
           "country_from": "DE",
           "country_to": "EN",
           "date_from": "2024-05-16T10:30:00",
-          "date_to": "2024-05-16T15:00:00"
+          "date_to": "2024-05-16T15:55:00"
         }
       ]
     },
     "back_destination": {
       "country_from": "EN",
       "country_to": "UA",
-      "date_from": "2024-05-22T08:00:00",
-      "date_to": "2024-05-22T15:00:00",
+      "date_from": "2024-05-22T08:22:00",
+      "date_to": "2024-05-22T15:47:00",
       "layovers": [
         {
           "id": 1,
           "country_from": "EN",
           "country_to": "DE",
-          "date_from": "2024-05-22T08:00:00",
+          "date_from": "2024-05-22T08:22:00",
           "date_to": "2024-05-22T11:30:00"
         },
         {
@@ -66,7 +90,7 @@
           "country_from": "DE",
           "country_to": "UA",
           "date_from": "2024-05-22T12:30:00",
-          "date_to": "2024-05-22T15:00:00"
+          "date_to": "2024-05-22T15:47:00"
         }
       ]
     }
@@ -75,19 +99,20 @@
     "id": 3,
     "price": 11100,
     "currency": "USD",
-    "ticket_date": "2024-05-16T10:00:00",
+    "ticket_date": "2024-05-16T10:24:00",
     "destination_count": 1,
+    "duration": 26340,
     "forward_destination": {
       "country_from": "US",
       "country_to": "FR",
-      "date_from": "2024-05-17T08:00:00",
-      "date_to": "2024-05-17T14:00:00",
+      "date_from": "2024-05-17T11:24:00",
+      "date_to": "2024-05-17T14:50:00",
       "layovers": [
         {
           "id": 1,
           "country_from": "US",
           "country_to": "DE",
-          "date_from": "2024-05-17T08:00:00",
+          "date_from": "2024-05-17T08:24:00",
           "date_to": "2024-05-17T11:00:00"
         },
         {
@@ -95,21 +120,21 @@
           "country_from": "DE",
           "country_to": "FR",
           "date_from": "2024-05-17T12:00:00",
-          "date_to": "2024-05-17T14:00:00"
+          "date_to": "2024-05-17T14:50:00"
         }
       ]
     },
     "back_destination": {
       "country_from": "FR",
       "country_to": "US",
-      "date_from": "2024-05-23T08:00:00",
-      "date_to": "2024-05-23T15:00:00",
+      "date_from": "2024-05-23T11:22:00",
+      "date_to": "2024-05-23T15:15:00",
       "layovers": [
         {
           "id": 1,
           "country_from": "FR",
           "country_to": "DE",
-          "date_from": "2024-05-23T08:00:00",
+          "date_from": "2024-05-23T11:22:00",
           "date_to": "2024-05-23T12:00:00"
         },
         {
@@ -117,7 +142,111 @@
           "country_from": "DE",
           "country_to": "US",
           "date_from": "2024-05-23T13:00:00",
-          "date_to": "2024-05-23T15:00:00"
+          "date_to": "2024-05-23T15:15:00"
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "price": 30100,
+    "currency": "USD",
+    "ticket_date": "2024-05-16T10:24:00",
+    "destination_count": 1,
+    "duration": 26340,
+    "forward_destination": {
+      "country_from": "US",
+      "country_to": "FR",
+      "date_from": "2024-05-17T11:24:00",
+      "date_to": "2024-05-17T14:50:00",
+      "layovers": [
+        {
+          "id": 1,
+          "country_from": "US",
+          "country_to": "DE",
+          "date_from": "2024-05-17T08:24:00",
+          "date_to": "2024-05-17T11:00:00"
+        },
+        {
+          "id": 2,
+          "country_from": "DE",
+          "country_to": "FR",
+          "date_from": "2024-05-17T12:00:00",
+          "date_to": "2024-05-17T14:50:00"
+        }
+      ]
+    },
+    "back_destination": {
+      "country_from": "FR",
+      "country_to": "US",
+      "date_from": "2024-05-23T11:22:00",
+      "date_to": "2024-05-23T15:15:00",
+      "layovers": [
+        {
+          "id": 1,
+          "country_from": "FR",
+          "country_to": "DE",
+          "date_from": "2024-05-23T11:22:00",
+          "date_to": "2024-05-23T12:00:00"
+        },
+        {
+          "id": 2,
+          "country_from": "DE",
+          "country_to": "US",
+          "date_from": "2024-05-23T13:00:00",
+          "date_to": "2024-05-23T15:15:00"
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "price": 10100,
+    "currency": "USD",
+    "ticket_date": "2024-05-16T10:24:00",
+    "destination_count": 1,
+    "duration": 26340,
+    "forward_destination": {
+      "country_from": "US",
+      "country_to": "FR",
+      "date_from": "2024-05-17T11:24:00",
+      "date_to": "2024-05-17T14:50:00",
+      "layovers": [
+        {
+          "id": 1,
+          "country_from": "US",
+          "country_to": "DE",
+          "date_from": "2024-05-17T08:24:00",
+          "date_to": "2024-05-17T11:00:00"
+        },
+        {
+          "id": 2,
+          "country_from": "DE",
+          "country_to": "FR",
+          "date_from": "2024-05-17T12:00:00",
+          "date_to": "2024-05-17T14:50:00"
+        }
+      ]
+    },
+    "back_destination": {
+      "country_from": "FR",
+      "country_to": "US",
+      "date_from": "2024-05-23T11:22:00",
+      "date_to": "2024-05-23T15:15:00",
+      "layovers": [
+        {
+          "id": 1,
+          "country_from": "FR",
+          "country_to": "DE",
+          "date_from": "2024-05-23T11:22:00",
+          "date_to": "2024-05-23T12:00:00"
+        },
+        {
+          "id": 2,
+          "country_from": "DE",
+          "country_to": "US",
+          "date_from": "2024-05-23T13:00:00",
+          "date_to": "2024-05-23T15:15:00"
         }
       ]
     }
@@ -128,6 +257,7 @@
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
     "destination_count": 2,
+    "duration": 48600,
     "forward_destination": {
       "country_from": "UA",
       "country_to": "EN",
@@ -188,11 +318,12 @@
     }
   },
   {
-    "id": 5,
-    "price": 52200,
+    "id": 9,
+    "price": 23200,
     "currency": "USD",
     "ticket_date": "2024-05-15T08:00:00",
-    "destination_count": 3,
+    "destination_count": 1,
+    "duration": 48600,
     "forward_destination": {
       "country_from": "UA",
       "country_to": "EN",
@@ -204,6 +335,58 @@
           "country_from": "UA",
           "country_to": "DE",
           "date_from": "2024-05-16T10:00:00",
+          "date_to": "2024-05-16T09:30:00"
+        },
+        {
+          "id": 2,
+          "country_from": "DE",
+          "country_to": "EN",
+          "date_from": "2024-05-16T10:30:00",
+          "date_to": "2024-05-16T15:00:00"
+        }
+      ]
+    },
+    "back_destination": {
+      "country_from": "EN",
+      "country_to": "UA",
+      "date_from": "2024-05-22T08:00:00",
+      "date_to": "2024-05-22T16:30:00",
+      "layovers": [
+        {
+          "id": 1,
+          "country_from": "EN",
+          "country_to": "DE",
+          "date_from": "2024-05-22T08:00:00",
+          "date_to": "2024-05-22T11:30:00"
+        },
+        {
+          "id": 3,
+          "country_from": "DE",
+          "country_to": "UA",
+          "date_from": "2024-05-22T15:00:00",
+          "date_to": "2024-05-22T16:30:00"
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "price": 52200,
+    "currency": "USD",
+    "ticket_date": "2024-05-15T08:00:00",
+    "destination_count": 3,
+    "duration": 130800,
+    "forward_destination": {
+      "country_from": "UA",
+      "country_to": "EN",
+      "date_from": "2024-05-15T11:10:00",
+      "date_to": "2024-05-16T15:00:00",
+      "layovers": [
+        {
+          "id": 1,
+          "country_from": "UA",
+          "country_to": "DE",
+          "date_from": "2024-05-15T11:10:00",
           "date_to": "2024-05-16T09:30:00"
         },
         {

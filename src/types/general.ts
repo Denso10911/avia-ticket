@@ -1,2 +1,2 @@
-export type SortT = "cheap" | "fast" | "balance"
+export type SortT = "price" | "time" | "optimal"
 export type CurrencyT = "USD" | "EUR" | "UAH"
