@@ -4,11 +4,13 @@ import { TicketT } from "../../../types/tickets"
 
 interface TicketsState {
   tickets: TicketT[]
+  totalCount: number
   loading: boolean
 }
 
 const initialState: TicketsState = {
   tickets: [],
+  totalCount: 0,
   loading: false,
 }
 
@@ -22,7 +24,8 @@ export const ticketsSlice = createSlice({
         state.loading = true
       })
       .addCase(getTickets.fulfilled, (state, action) => {
-        state.tickets = action.payload
+        state.tickets = action.payload.data
+        state.totalCount = action.payload.total_count
         state.loading = false
       })
       .addCase(getTickets.rejected, (state, action) => {

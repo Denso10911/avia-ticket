@@ -1,0 +1,23 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/typography";
+
+.button {
+  @extend .display--small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  background-color: $blue-base;
+  text-transform: uppercase;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 50px;
+
+  &:hover {
+    box-shadow: 0 2px 8px 3px #0000001a;
+  }
+}
