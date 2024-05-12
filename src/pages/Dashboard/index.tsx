@@ -9,11 +9,11 @@ import { TicketSearchParamsT } from "../../types/tickets"
 import { Button, Filters, Sorting, Ticket } from "../../components"
 
 import "./dashboard.scss"
+import Tickets from "../../components/Tickets"
 
 const Dashboard = () => {
   const dispatch = useAppDispatch()
-  const tickets = useAppSelector(getTicketsSelector)
-  const { totalCount, loading } = useAppSelector(state => state.tickets)
+
   const [searchParams] = useSearchParams()
 
   const destinations = searchParams.get("destinations")
@@ -36,10 +36,6 @@ const Dashboard = () => {
     setPageSize(5)
   }, [destinations, sort])
 
-  const handleButtonClick = () => {
-    setPageSize(prev => prev + 5)
-  }
-
   return (
     <div className="dashboard">
       <div className="dashboard__filters">
@@ -49,17 +45,7 @@ const Dashboard = () => {
         <Sorting />
       </div>
       <div className="dashboard__data">
-        {tickets.map(el => (
-          <Ticket ticket={el} key={el.id} />
-        ))}
-        {totalCount > tickets.length && (
-          <Button
-            text="показати ще 5 квитків"
-            onClick={handleButtonClick}
-            type="button"
-            loading={loading}
-          />
-        )}
+        <Tickets setPageSize={setPageSize} />
       </div>
     </div>
   )

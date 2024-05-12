@@ -29,6 +29,16 @@
     }
   }
 
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include phone-xs {
+      flex-direction: column;
+    }
+  }
+
   &__item {
     display: flex;
     justify-content: center;
