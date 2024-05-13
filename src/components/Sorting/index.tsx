@@ -1,10 +1,7 @@
-import React, { useState } from "react"
+import React, { Dispatch, SetStateAction } from "react"
 import { useSearchParams } from "react-router-dom"
 import cn from "classnames"
 
-import DrawerMobile from "../DrawerMobile"
-
-import sortIcon from "../../assets/images/sort.svg"
 import "./sorting.scss"
 
 const sortingList = [
@@ -24,39 +21,39 @@ const sortingList = [
     value: "optimal",
   },
 ]
+interface Props {
+  setVisible?: Dispatch<SetStateAction<boolean>>
+}
 
-const Sorting = () => {
+const Sorting: React.FC<Props> = ({ setVisible }) => {
   const [searchParams, setSearchParams] = useSearchParams()
   const sort = searchParams.get("sort") || "price"
-
-  const [visible, setVisible] = useState(false)
 
   const handleTabClick = (value: string) => {
     const params = new URLSearchParams(searchParams)
     params.set("sort", value)
     setSearchParams(params, { replace: true })
-    setVisible(false)
+
+    if (setVisible) setVisible(false)
   }
 
   return (
-    <DrawerMobile icon={sortIcon} visible={visible} setVisible={setVisible}>
-      <div className="sorting">
-        <div className="sorting__title">Порядок квитків</div>
-        <ul className="sorting__list">
-          {sortingList.map(el => {
-            return (
-              <li
-                className={cn("sorting__item", sort === el.value && "sorting__item_active")}
-                key={el.id}
-                onClick={() => handleTabClick(el.value)}
-              >
-                {el.label}
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    </DrawerMobile>
+    <div className="sorting">
+      <div className="sorting__title">Порядок квитків</div>
+      <ul className="sorting__list">
+        {sortingList.map(el => {
+          return (
+            <li
+              className={cn("sorting__item", sort === el.value && "sorting__item_active")}
+              key={el.id}
+              onClick={() => handleTabClick(el.value)}
+            >
+              {el.label}
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 
